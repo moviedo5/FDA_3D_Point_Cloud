@@ -4,7 +4,7 @@ output: github_document
 
 #  Supplementary material for "3D point cloud semantic segmentation through functional data analysis"
 
-Supplementary codes and data used in the paper @darbalaei2022functional.
+Supplementary codes and data used in the paper "*3D point cloud semantic segmentation through functional data analysis*".
 
 
 Please cite this paper as:
@@ -68,9 +68,8 @@ library(fda.usc.devel)
 ```
 -->
 
-# Real Data Application
+# Real Data Application: 3D cloud point
 
-## 3D cloud point
 Our case study example is 3D cloud point.
 
 

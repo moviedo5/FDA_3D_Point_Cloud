@@ -1,7 +1,8 @@
 
 # Supplementary material for “3D point cloud semantic segmentation through functional data analysis”
 
-Supplementary codes and data used in the paper @darbalaei2022functional.
+Supplementary codes and data used in the paper *3D point cloud semantic
+segmentation through functional data analysis*
 
 Please cite this paper as:
 

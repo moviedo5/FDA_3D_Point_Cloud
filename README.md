@@ -1,8 +1,8 @@
 
 # Supplementary material for “3D point cloud semantic segmentation through functional data analysis”
 
-Supplementary codes and data used in the paper *3D point cloud semantic
-segmentation through functional data analysis*
+Supplementary codes and data used in the paper “*3D point cloud semantic
+segmentation through functional data analysis*”.
 
 Please cite this paper as:
 
@@ -25,7 +25,7 @@ Github with (2023/03/29):
 
 ``` r
 #install.packages("remotes")
-remotes::install_github("moviedo5/FDA_3D_Point_Cloud/pkg/fda.usc.devel)
+remotes::install_github("moviedo5/FDA_3D_Point_Cloud/pkg/fda.usc.devel")
 # install.packages("devtools")
 # require(devtools)
 # devtools::install_github("moviedo5/FDA_3D_Point_Cloud/pkg/fda.usc.devel")
@@ -67,14 +67,12 @@ library(fda.usc.devel)
 ```
 -->
 
-# Real Data Application
-
-## 3D cloud point
+# Real Data Application: 3D cloud point
 
 Our case study example is 3D cloud point.
 
 ``` r
-library(fda.usc)
+library(fda.usc.devel)
 load(file="./data/ldf.train.RData")
 class(ldf.train)
 sapply(ldf.train,dim)
@@ -85,14 +83,10 @@ n
 table(ldf.train$df$class)
 labels <- c("trunk","grass","branch+leaf","bush")
 #levEn <- levels(ldf.train$df$class)
-
 # predictor variables (multivariate)
 predictors <- names(ldf.train$df[-c(1,2,3,5,6,831)])
-
 # linear correlation between predictors
 dfcor <- cor(ldf.train$df[,c(predictors)])
 ```
-
-The corresponding plots are displayed in Figure 16 of paper.
 
 ## References

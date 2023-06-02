@@ -27,7 +27,7 @@ To install `fda.usc.devel` package (devel version of `fda.usc`) from Github with
 
 ```{r , eval = FALSE}
 #install.packages("remotes")
-remotes::install_github("moviedo5/FDA_3D_Point_Cloud/pkg/fda.usc.devel)
+remotes::install_github("moviedo5/FDA_3D_Point_Cloud/pkg/fda.usc.devel")
 # install.packages("devtools")
 # require(devtools)
 # devtools::install_github("moviedo5/FDA_3D_Point_Cloud/pkg/fda.usc.devel")
@@ -74,7 +74,7 @@ Our case study example is 3D cloud point.
 
 
 ```{r , eval=F,message=F,warning=F}
-library(fda.usc)
+library(fda.usc.devel)
 load(file="./data/ldf.train.RData")
 class(ldf.train)
 sapply(ldf.train,dim)
@@ -85,16 +85,11 @@ n
 table(ldf.train$df$class)
 labels <- c("trunk","grass","branch+leaf","bush")
 #levEn <- levels(ldf.train$df$class)
-
 # predictor variables (multivariate)
 predictors <- names(ldf.train$df[-c(1,2,3,5,6,831)])
-
 # linear correlation between predictors
 dfcor <- cor(ldf.train$df[,c(predictors)])
-
 ```
-
-The corresponding plots are displayed in Figure 16 of paper. 
 
 ```{r ,eval=F,message=F,warning=F,echo=FALSE}
 #par(mfrow=c(2,3))
